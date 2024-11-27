@@ -2,15 +2,21 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
+import Hero from '../components/Hero'
 
 function LandingPage() {
   return (
     <div>
       <Navbar/>
+      <div className='flex flex-col justify-center items-center'>
+      <Hero/>
+      <div className='flex flex-row'>
       <Card/>
-      <main className="min-h-screen bg-gray-100">
+      <Card/>
+      </div>
+      </div>
       
-      </main>
+    
       <Footer/>
     </div>
   )

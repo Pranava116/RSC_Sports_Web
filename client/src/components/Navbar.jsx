@@ -7,16 +7,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-7">
+    <nav className="bg-transparent p-7">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="text-white text-xl font-semibold">
             Logo
         </div>
         <div className="hidden md:flex space-x-10">
-          <a href="#" className="text-white hover:text-gray-400">Home</a>
-          <a href="#" className="text-white hover:text-gray-400">Step Up</a>
-          <a href="#" className="text-white hover:text-gray-400">Agones</a>
-          <a href="#" className="text-white hover:text-gray-400">About Us</a>
+          <a href="#" className="navLinks">Home</a>
+          <a href="#" className="navLinks">Step Up</a>
+          <a href="#" className="navLinks">Agones</a>
+          <a href="#" className="navLinks">About Us</a>
         </div>
         <div className="md:hidden flex items-center">
           <button
