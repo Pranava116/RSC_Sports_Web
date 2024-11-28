@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,7 +11,7 @@ const Navbar = () => {
     <nav className="bg-transparent p-7">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="text-white text-xl font-semibold">
-            Logo
+            <img src="/Logo.png" className="object-contain h-16 w-16"/>
         </div>
         <div className="hidden md:flex space-x-10">
           <a href="#" className="navLinks">Home</a>

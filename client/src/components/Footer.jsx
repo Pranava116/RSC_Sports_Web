@@ -3,12 +3,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-6">
+    <footer className="bg-gray-800 text-white py-8 xl:fixed inset-x-0 bottom-0">
+      <div className="container mx-auto px-6 ">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left Section */}
           <div className="text-lg font-semibold mb-4 md:mb-0">
-            RNSIT Sports Club 
+            RSC
           </div>
 
           {/* Center Section (Links) */}

@@ -3,10 +3,12 @@ import './App.css'
 
 function App() {
   return (
-    <div className='bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a]'>
+    <div className='bg-gradient-to-r from-blue-900 to-blue-500'>
       <LandingPage />
     </div>
   )
 }
 
 export default App
+
+/**/
