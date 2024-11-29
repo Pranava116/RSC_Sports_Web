@@ -2,12 +2,14 @@ import React from 'react'
 import { FaPersonRunning } from "react-icons/fa6";
 function Card(props) {
   return (
-<div class=" text-wrap mx-8 my-8 p-6 w-90 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <div className=' flex'>
+<div class="flex flex-col animate-slide mx-8 my-20 mt-[-30px] p-6 max-w-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-evenly sm:animate-fade-in-up">
+    <div className=' flex '>
     <a href="#">
         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{props.title}</h5>
     </a>
-    <FaPersonRunning className='mx-5 w-10  ' size={27} color='white'/>
+    <div className='mx-5'>
+      <FaPersonRunning color='white' size={30}/>
+    </div>
     </div>
     <p class="mb-3 font-normal text-wrap text-gray-500 dark:text-gray-400">{props.desc}</p>
     <div className='flex flex-row text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 '>

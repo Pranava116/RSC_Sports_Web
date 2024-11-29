@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 xl:fixed inset-x-0 bottom-0">
+    <footer className="bg-gray-800 text-white py-8 2xl:fixed inset-x-0 bottom-0">
       <div className="container mx-auto px-6 ">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left Section */}
@@ -13,13 +13,13 @@ const Footer = () => {
 
           {/* Center Section (Links) */}
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-            <a href="#about" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               About
             </a>
-            <a href="#services" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Services
             </a>
-            <a href="#contact" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Contact
             </a>
           </div>

@@ -33,8 +33,6 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
       <div
         className={`md:hidden ${isOpen ? "block" : "hidden"} bg-grey-800 text-white p-7 px-0 space-y-5 `}
       >

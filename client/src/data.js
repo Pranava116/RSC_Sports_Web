@@ -5,7 +5,7 @@ const data = [{
 },
 {
     title: "Agones",
-    desc: "Agones is a multi-sport event that celebrates athleticism with a variety of competitions for all skill levels. It offers participants the chance to compete in both team and individual sports. The event promotes fitness, teamwork, and sportsmanship in a fun and inclusive atmosphere.",
+    desc: "Agones is a dynamic event organizer dedicated to bringing exciting sports competitions to life. With a focus on fostering athleticism and community, Agones curates engaging events that inspire participants and fans alike.",
     component: "<MdOutlineSportsBasketball />"
 }
 ]
