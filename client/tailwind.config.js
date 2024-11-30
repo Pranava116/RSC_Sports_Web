@@ -14,7 +14,8 @@ module.exports = {
                 },
                 '100%': {
                     opacity: '1',
-                    transform: 'translateY(0)'
+                    transform: 'translateY(0)',
+                    AnimationTimeline: 'view()'
                 },
             },
             'slide': {
@@ -26,11 +27,18 @@ module.exports = {
                 opacity: '1',
                 transform: 'translateX(0px)'
               }
-            }
+            },
+            'typewriter': {
+              to: {
+                right: '100%'
+              }
+            },
         },
+
         animation: {
-            'fade-in-up': 'fade-in-up 1s ease-out',
-            'slide': 'slide 0.7s'
+            'fade-in-up': 'fade-in-up ease-out ',
+            'slide': 'slide ',
+            'typewriter': "typewriter 2s steps(11) forwards infinite"
         },
     },
   },

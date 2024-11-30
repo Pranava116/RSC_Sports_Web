@@ -8,15 +8,15 @@ import Logo from '../components/Logo.jsx'
 import Text from '../components/Text.jsx'
 function LandingPage() {
   return (
-    <div>
-      <Navbar/>
-      <div className='flex flex-col justify-center items-center'>
-        <div className='mx-6 my-6'>
-        <Hero/>
-        </div>
-        <Logo/>
+    <div className=' bg-transparent'>
+        <Navbar/>
+        <div className='flex flex-col items-center justify-center'>
+            <div className='my-6 mx-6'>
+            <Hero/>
+          </div>
+           <Logo/>
         <Text/>
-      <div className='my-12 block md:flex'>
+      <div className='my-12 block md:flex '>
         {data.map(({title, component, desc}) => {
           return(
           <Card title={title} component={component} desc={desc} />

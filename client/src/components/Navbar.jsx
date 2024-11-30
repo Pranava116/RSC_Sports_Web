@@ -11,9 +11,9 @@ const Navbar = () => {
     <nav className="bg-transparent p-7">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="text-white text-xl font-semibold">
-            <img src="/Logo.png" className="object-contain h-16 w-16"/>
+            <img src="/Logo.png" className="object-contain h-[70px] w-[70px]" />
         </div>
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden md:flex space-x-10 font-mono">
           <a href="#" className="navLinks">Home</a>
           <a href="#" className="navLinks">Step Up</a>
           <a href="#" className="navLinks">Agones</a>

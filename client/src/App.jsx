@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className='bg-gradient-to-r from-blue-900 to-blue-500'>
+    <div className='bg-transparent'>
       <LandingPage />
     </div>
   )

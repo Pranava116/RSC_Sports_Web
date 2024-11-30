@@ -1,8 +1,9 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 import { FaPersonRunning } from "react-icons/fa6";
 function Card(props) {
   return (
-<div class="flex flex-col animate-slide mx-8 my-20 mt-[-30px] p-6 max-w-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-evenly sm:animate-fade-in-up">
+<motion.div initial={{opacity: 0}} viewport={{margin: "-200px"}} whileInView={{opacity: 1}} class="flex flex-col animate-slide  mx-8 my-20 mt-[-30px] p-6 max-w-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-evenly sm:animate-fade-in-up">
     <div className=' flex '>
     <a href="#">
         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{props.title}</h5>
@@ -16,12 +17,12 @@ function Card(props) {
         <h3>Date:</h3>
         <h3 className='mx-2'>12/04/2024</h3>
     </div>
-    <div className='flex flex-row my-3 text-white'>
+    <div className='flex flex-row my-3  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
         <h3 >Venue: </h3>
-        <h3 className='mx-2'>Bengaluru</h3>
+        <h3  className='mx-2'>Bengaluru</h3>
     </div>
     <button className="text-white hover:text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 scale-x-100transition-transform duration-300" >Know More</button>
-</div>
+</motion.div>
 
   )
 }

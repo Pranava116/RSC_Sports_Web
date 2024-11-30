@@ -2,6 +2,8 @@ import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 function Hero() {
   return (
+     
+    <div className=''>
       <div className='animate-fade-in-up'>
        <TypeAnimation
       sequence={[
@@ -16,9 +18,10 @@ function Hero() {
       ]}
       wrapper="div"
       speed={30}
-      style={{ fontSize: '3.2rem', display: 'block', color:"white"}}
+      style={{ fontSize: '3.4rem', display: 'block', color:"white", fontFamily: "Alkatra, system-ui"}}
       repeat={Infinity}
     />
+    </div>
     </div>
   )
 }
@@ -27,10 +30,4 @@ export default Hero
 
 
 
-/*<div className=''>
-      <h1 className='relative w-[max-content] font-mono
-before:absolute before:inset-0 before:animate-typewriter
-before:bg-white
-after:absolute after:inset-0 after:w-[0.125em] after:animate-caret
-after:bg-blackr'>Sports Club</h1>
-    </div>*/
+
