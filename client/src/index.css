@@ -19,6 +19,18 @@
     -moz-animation: animation 5s ease infinite;
     animation: animation 5s ease infinite;
 }
+.cursor{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(81, 0, 128);
+    position: fixed;
+    left: 0%;
+    top: 0;
+    border-radius: 50%;
+    filter: blur(110px);
+    z-index: -5;
+    box-shadow: 10px 20px 20px grey;
+}
 @keyframes animation {
     0%,
     100% {

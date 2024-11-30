@@ -17,9 +17,9 @@ function LandingPage() {
            <Logo/>
         <Text/>
       <div className='my-12 block md:flex '>
-        {data.map(({title, component, desc}) => {
+        {data.map(({title, component, desc, desc_sm}) => {
           return(
-          <Card title={title} component={component} desc={desc} />
+          <Card title={title} component={component} desc={desc} desc_sm={desc_sm} />
           )
         })}
         </div>
