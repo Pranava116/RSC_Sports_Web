@@ -28,17 +28,10 @@ module.exports = {
                 transform: 'translateX(0px)'
               }
             },
-            'typewriter': {
-              to: {
-                right: '100%'
-              }
-            },
-        },
-
         animation: {
             'fade-in-up': 'fade-in-up ease-out ',
             'slide': 'slide ',
-            'typewriter': "typewriter 2s steps(11) forwards infinite"
+        }
         },
     },
   },

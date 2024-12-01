@@ -10,16 +10,18 @@ function Hero() {
         // Same substring at the start will only be typed out once, initially
         '',
         300, // wait 1s before replacing "Mice" with "Hamsters"
-        'RNSIT Sports Club Presents',
-        1000,
+        
         "",
-        1000
+        1000,
+        "RNSIT Sports Club Presents",
+        1000,
 
       ]}
       wrapper="div"
       speed={30}
       style={{ fontSize: '3.4rem', display: 'block', color:"white", fontFamily: "Alkatra, system-ui"}}
-      repeat={Infinity}
+      repeat={0}
+      cursor='false'
     />
     </div>
     </div>
