@@ -15,13 +15,19 @@ function LandingPage() {
             <Hero/>
           </div>
            <Logo/>
-        <Text/>
+        <Text text="EVENTS"/>
       <div className='my-12 block md:flex '>
         {data.map(({title, component, desc, desc_sm}) => {
           return(
           <Card title={title} component={component} desc={desc} desc_sm={desc_sm} />
           )
         })}
+        </div>
+      </div>
+      <div className='flex-col items-center justify-center'>
+        <Text text="SPORTS" />
+        <div className='flex '>
+          add a card here
         </div>
       </div>
       <Footer/>

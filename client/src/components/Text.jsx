@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Text() {
+function Text(props) {
   return (
     <div>
-      <h1 className='text-6xl text-white mb-20'>EVENTS</h1>
+      <h1 className='text-6xl text-white mb-20'>{props.text}</h1>
     </div>
   )
 }
