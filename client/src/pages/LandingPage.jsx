@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import data from '../data.js'
 import Logo from '../components/Logo.jsx'
 import Text from '../components/Text.jsx'
+import OpenCards from '../components/SportsCard.jsx'
 function LandingPage() {
   return (
     <div className=' bg-transparent'>
@@ -23,12 +24,16 @@ function LandingPage() {
           )
         })}
         </div>
-      </div>
-      <div className='flex-col items-center justify-center'>
-        <Text text="SPORTS" />
+        <div className='flex-col items-center justify-center'>
+          <div className=''>
+          <Text text="SPORTS" />
+          </div>
+        
         <div className='flex '>
-          add a card here
+          <OpenCards/>
+          
         </div>
+      </div>
       </div>
       <Footer/>
     </div>
