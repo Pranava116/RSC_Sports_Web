@@ -14,9 +14,9 @@ const Navbar = () => {
             <img src="/Logo.png" className="object-contain h-[70px] w-[70px]" />
         </div>
         <div className="hidden md:flex space-x-10 font-mono">
-          <a href="#" className="navLinks">Home</a>
+          <a href="/" className="navLinks">Home</a>
           <a href="#" className="navLinks">Step Up</a>
-          <a href="#" className="navLinks">Agones</a>
+          <a href="/agones" className="navLinks">Agones</a>
           <a href="#" className="navLinks">About Us</a>
         </div>
         <div className="md:hidden flex items-center">
@@ -37,7 +37,7 @@ const Navbar = () => {
         className={`md:hidden ${isOpen ? "block" : "hidden"} bg-grey-800 text-white p-7 px-0 space-y-5 `}
       >
         <a href="#" className="block">Home</a>
-        <a href="#" className="block">About</a>
+        <a href="/agones" className="block">Agones</a>
         <a href="#" className="block">Services</a>
         <a href="#" className="block">Contact</a>
       </div>

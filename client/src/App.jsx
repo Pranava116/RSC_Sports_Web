@@ -2,6 +2,9 @@ import React from 'react'
 import LandingPage from './pages/LandingPage'
 import { useState, useEffect } from 'react';
 import {motion} from 'framer-motion'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import AgonesPage from './pages/AgonesPage';
+
 function App() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -39,7 +42,12 @@ function App() {
        animate={cursorVariant}>
 
       </motion.div>
-      <LandingPage/>
+      <Router>
+        <Routes>
+          <Route path='/' element={<LandingPage/>} />
+          <Route path='/agones' element={<AgonesPage/>} />
+        </Routes>
+      </Router>
     </div>
   )
 }
