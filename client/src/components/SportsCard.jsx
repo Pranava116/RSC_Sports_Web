@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {motion} from 'framer-motion'
 import foot from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/football.png'
 import volley from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/volleyball_new2.png'
+import basket from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/basketball.png'
 const OpenCards = () => {
 
   const [expandedIndex, setExpandedIndex] = useState(null)
@@ -22,7 +23,7 @@ const OpenCards = () => {
     }
   }
 
-  const cardImages = [volley, foot, foot, foot]
+  const cardImages = [volley, foot, basket, foot]
   const CardTitle = [
     "VolleyBall",
     "Cricket",
@@ -35,9 +36,10 @@ const OpenCards = () => {
     'This is a description, write whatever you need here, this is just text for a test',
     'This is a description, write whatever you need here, this is just text for a test',
   ]
+  const windowSize = window.innerWidth;
   return (
-   <section className='py-16 pb-[300px] bg-transparent '>
-      <div className='mt-12 flex flex-col md:flex-row justify-center items-center gap-'>
+   <section className=' pb-[200px] bg-transparent w-fit'>
+      <div className='mt-12 flex flex-col md:flex-row justify-center items-center  gap-'>
         {[0, 1, 2, 3].map((index) => (
             <motion.div
             key={index}
@@ -53,18 +55,20 @@ const OpenCards = () => {
                             backgroundColor: 'black',
                             marginLeft: '10px',
                             marginRight: '10px',
-                            border: '1px solid gray'
+                            border: '1px solid gray',
             }}
           >
               <div className='card-content h-full flex flex-col justify-end'>
-                <div className='flex justify-center items-center mb-100px'>
-                <img src={volley} style={{width: '150px', marginBottom: '120px'}}/>
-                </div>
+                  <div className='flex justify-center items-center mb-100px'>
+                  <img src={cardImages[index]} style={{width: '150px', marginBottom: '120px'}}/>
+                  </div>
+  
                 
-                  <div className='card-footer rounded-b-[20px] bg-black  min-h-[100px] flex flex-col items-center justify-center'>
+                  <div className='card-footer rounded-b-[20px] bg-black min-h-[100px] flex flex-col items-center justify-center'>
                     <h2 className='text-xl font-semibold text-white text-center'>{CardTitle[index]}</h2>
+                    <p className='text-white'>{windowSize}</p>
                     {index === expandedIndex && (
-                      <p className='mt-2 text-gray-300 text-center'>{cardDescriptions[index]} </p>
+                      <p className='mt-2 text-gray-300 text-center px-[50px]'>{cardDescriptions[index]} </p>
                     )
 
                     }
