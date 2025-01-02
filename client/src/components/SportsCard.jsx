@@ -50,7 +50,7 @@
 //   );
 // }
 
-
+import { Carousel } from "@material-tailwind/react";
 import React, {useState} from 'react'
 import {motion} from 'framer-motion'
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
@@ -92,6 +92,7 @@ const SportsCard = (props) => {
   ]
   const windowSize = window.innerWidth;
   return (
+    
    <section className='flex flex-row bg-transparent'>
       {/* <div className='mt-12 flex flex-col md:flex-row justify-center items-center  gap-'>
         {[0, 1, 2, 3].map((index) => (
@@ -133,33 +134,35 @@ const SportsCard = (props) => {
       </div> */}
 
       <div>
-      (<CardContainer className=" inter-var">
+      <CardContainer className=" w-[300px] mx-[30px] inter-var justify-center items-cent">
+      
        <CardBody
-        className="bg-gray-50 relative group/card w-auto h-[500px] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  sm:w-[30rem] rounded-xl p-6 border  ">
+        className="bg-gray-50 relative group/card w-[500px] h-[500px] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  sm:w-[30rem] rounded-xl p-6 border  ">
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white">
-          Make things float in air
+          className="text-xl font-bold text-neutral-600 dark:text-white ">
+          Cricket
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          Hover over this card to unleash the power of CSS perspective
+          
         </CardItem>
-        <CardItem translateZ="100" className="w-[200px] items-center mt-4">
+        <CardItem translateZ="100" className="w-[250px] object-contain items-center mt-8">
           {/* {[0, 1, 2, 3 ].map((index) => {
             return( */}
               <img
             src={props.src}
-            height="400"
-            width="400"
+            height="200"
+            width="200"
+
             style={{
-              marginLeft: "100px"
+              marginLeft: "10px"
             }}
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail" />
-            )
+            
           {/* })}
           {  } */}
         </CardItem>
@@ -180,10 +183,11 @@ const SportsCard = (props) => {
           </CardItem>
         </div>
       </CardBody>
-    </CardContainer>)
+    </CardContainer>
       </div>
       
    </section>
+   
   )
 }
 

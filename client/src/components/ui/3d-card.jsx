@@ -43,7 +43,7 @@ export const CardContainer = ({
       <div
         className={cn("py-20  flex items-center justify-center", containerClassName)}
         style={{
-          perspective: "1000px",
+          perspective: "2000px",
         }}>
         <div
           ref={containerRef}

@@ -12,6 +12,8 @@ import Logo from '../components/Logo.jsx'
 import Text from '../components/Text.jsx'
 import SportsCard from '../components/SportsCard.jsx'
 function LandingPage() {
+  const width = window.innerWidth
+  const height = window.innerHeight
   return (
     <div className=' bg-transparent'>
         <Navbar/>
@@ -33,7 +35,7 @@ function LandingPage() {
           <Text text="SPORTS" />
           </div>
         
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap justify-center items-center'>
           <SportsCard src={foot}/>
           <SportsCard src={volley}/>
           <SportsCard src={basket}/>
