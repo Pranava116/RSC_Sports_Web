@@ -5,7 +5,7 @@ function Card(props) {
   const screen = window.screen.width
   return (
     <>
-<motion.div initial={{opacity: 0}} viewport={{margin: "-200px"}} whileInView={{opacity: 1}} class=" hover:scale-110 transform: 0.4s flex flex-col animate-slide border-solid  mx-8 my-20 mt-[-30px] p-6 max-w-[500px] bg-white border border-gray-600 rounded-lg  dark:bg-gray-800 dark:border-gray-500 shadow justify-evenly sm:animate-fade-in-up bg-gradient-to-tl from-black to-gray-800">
+<motion.div initial={{opacity: 0}} viewport={{margin: "-200px"}} whileInView={{opacity: 1}} class=" flex flex-col animate-slide border-solid  mx-8 my-20 mt-[-30px] p-6 max-w-[500px] bg-white border border-gray-600 rounded-lg  dark:bg-gray-800 dark:border-gray-500 shadow justify-evenly sm:animate-fade-in-up bg-gradient-to-tl from-black to-gray-800">
     <div className=' flex '>
     <a href="#">
         <h5 class="mb-4 text-3xl font-semibold tracking-tight  dark:text-white">{props.title}</h5>
