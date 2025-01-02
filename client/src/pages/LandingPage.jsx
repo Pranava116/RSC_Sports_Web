@@ -34,7 +34,6 @@ function LandingPage() {
           <div className=''>
           <Text text="SPORTS" />
           </div>
-        
         <div className='flex flex-wrap justify-center items-center'>
           <SportsCard src={foot}/>
           <SportsCard src={volley}/>
