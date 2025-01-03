@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import {motion} from 'framer-motion'
+import tt from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/tt_color.png'
 import foot from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/football.png'
-import volley from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/volleyball_new2.png'
-import basket from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/basketball.png'
+import volley from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/volley_color.png'
+import basket from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/bb_color_2.png'
 const OpenCards = () => {
 
   const [expandedIndex, setExpandedIndex] = useState(null)
@@ -23,12 +24,12 @@ const OpenCards = () => {
     }
   }
 
-  const cardImages = [volley, foot, basket, foot]
+  const cardImages = [volley, foot, basket, tt]
   const CardTitle = [
     "VolleyBall",
-    "Cricket",
+    "FootBall",
     "Basketball",
-    "Football"
+    "Table Tennis"
   ]
   const cardDescriptions = [
     'This is a description, write whatever you need here, this is just text for a test',
@@ -66,7 +67,7 @@ const OpenCards = () => {
                 
                   <div className='card-footer rounded-b-[20px] bg-black min-h-[100px] flex flex-col items-center justify-center'>
                     <h2 className='text-xl font-semibold text-white text-center'>{CardTitle[index]}</h2>
-                    <p className='text-white'>{windowSize}</p>
+                  
                     {index === expandedIndex && (
                       <p className='mt-2 text-gray-300 text-center px-[50px]'>{cardDescriptions[index]} </p>
                     )
