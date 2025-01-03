@@ -67,7 +67,7 @@ const OpenCards = () => {
                 
                   <div className='card-footer rounded-b-[20px] bg-black min-h-[100px] flex flex-col items-center justify-center'>
                     <h2 className='text-xl font-semibold text-white text-center'>{CardTitle[index]}</h2>
-                  
+                    <p className='text-white'>{windowSize}</p>
                     {index === expandedIndex && (
                       <p className='mt-2 text-gray-300 text-center px-[50px]'>{cardDescriptions[index]} </p>
                     )

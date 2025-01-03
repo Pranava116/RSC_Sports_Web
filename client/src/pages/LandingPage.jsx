@@ -4,10 +4,16 @@ import Footer from '../components/Footer'
 import Card from '../components/Card'
 import Hero from '../components/Hero'
 import data from '../data.js'
+import foot from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/football.png'
+import volley from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/volleyball_new2.png'
+import basket from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/basketball.png'
+
 import Logo from '../components/Logo.jsx'
 import Text from '../components/Text.jsx'
-import OpenCards from '../components/SportsCard.jsx'
+import SportsCard from '../components/SportsCard.jsx'
 function LandingPage() {
+  const width = window.innerWidth
+  const height = window.innerHeight
   return (
     <div className=' bg-transparent'>
         <Navbar/>
@@ -28,10 +34,8 @@ function LandingPage() {
           <div className=''>
           <Text text="SPORTS" />
           </div>
-        
-        <div className='flex '>
-          <OpenCards/>
-          
+        <div className='flex flex-wrap justify-center items-center'>
+          <SportsCard/>
         </div>
       </div>
       </div>
