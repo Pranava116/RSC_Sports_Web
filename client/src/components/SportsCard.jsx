@@ -54,9 +54,9 @@ import { Carousel } from "@material-tailwind/react";
 import React, {useState} from 'react'
 import {motion} from 'framer-motion'
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import foot from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/football.png'
-import volley from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/volleyball_new2.png'
-import basket from '/Users/Pranava G Rao/Desktop/Full Web Dev/RSC Web/client/public/basketball.png'
+import tt from '../assets/tt_color.png'
+import basket from '../assets/bb_color.png'
+import volley from '../assets/volley_color.png'
 const SportsCard = (props) => {
 
   const [expandedIndex, setExpandedIndex] = useState(null)
@@ -77,7 +77,7 @@ const SportsCard = (props) => {
     }
   }
 
-  const cardImages = [volley, foot, basket, foot]
+  const cardImages = [tt, volley, basket, volley]
   const CardTitle = [
     "VolleyBall",
     "Cricket",
@@ -137,7 +137,7 @@ const SportsCard = (props) => {
       <CardContainer className=" w-[300px] mx-[30px] inter-var justify-center items-cent">
       
        <CardBody
-        className="bg-gray-50 relative group/card w-[500px] h-[500px] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  sm:w-[30rem] rounded-xl p-6 border  ">
+        className="bg-gray-50 relative group/card w-[500px] h-[450px] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  sm:w-[30rem] rounded-xl p-6 border  ">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white ">
@@ -149,18 +149,19 @@ const SportsCard = (props) => {
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
           
         </CardItem>
-        <CardItem translateZ="100" className="w-[250px] object-contain items-center mt-8">
+        <CardItem translateZ="100" className="w-[170px] object-fit items-center mt-8">
           {/* {[0, 1, 2, 3 ].map((index) => {
             return( */}
               <img
             src={props.src}
-            height="200"
-            width="200"
+           
 
             style={{
-              marginLeft: "10px"
+              marginLeft: "10px",
+               height: "200px",
+            width: "200px",
             }}
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-[100px] w-[200px] object-contain rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail" />
             
           {/* })}
