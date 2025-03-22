@@ -28,9 +28,6 @@ function LandingPage() {
         })}
         </div>
         <div className='flex-col items-center justify-center'>
-          <div className=''>
-          <Text text="SPORTS" />
-          </div>
         
       </div>
       </div>
