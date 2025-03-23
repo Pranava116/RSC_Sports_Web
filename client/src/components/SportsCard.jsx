@@ -69,7 +69,7 @@ const SportsCard = (props) => {
 					Read More
                   </CardItem>
                 </AlertDialogTrigger>
-                <AlertDialogContent className='bg-slate-700'>
+                <AlertDialogContent className='bg-black'>
                   <AlertDialogHeader >
                     <AlertDialogTitle className='text-white'>{props.title}</AlertDialogTitle>
                     <AlertDialogDescription className='text-white'>
@@ -80,7 +80,6 @@ const SportsCard = (props) => {
                     <AlertDialogCancel onClick={() => setShowMore(false)}>
                       Close
                     </AlertDialogCancel>
-                    <AlertDialogAction className='text-white border border-white'>Continue</AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
