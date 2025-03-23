@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer components{
-    *{
-    }
+    *{  
     .navLinks{
         @apply relative text-white
     }
     .navLinks::after{
         @apply absolute content-[''] w-full h-1 left-0 bottom-[-6px]  bg-gradient-to-r from-blue-400 to-purple-600 rounded scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-bottom-right hover:origin-bottom-left
     }
+}
 }
 .animated-background {
     background-size: 400%;

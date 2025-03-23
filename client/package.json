@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "preview": "vite preview",
+    "start": "next start"
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",

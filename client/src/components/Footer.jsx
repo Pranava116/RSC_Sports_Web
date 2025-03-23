@@ -4,15 +4,15 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8 2xl:fixed inset-x-0 bottom-0">
-      <div className="container mx-auto px-6 ">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="container mx-auto px-6 bg-gray-900">
+        <div className="flex flex-col md:flex-row justify-between items-center bg-gray-900">
           {/* Left Section */}
-          <div className="text-lg font-semibold mb-4 md:mb-0">
+          <div className="text-lg font-semibold mb-4 md:mb-0 bg-gray-900">
             RSC
           </div>
 
           {/* Center Section (Links) */}
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 bg-gray-900">
             <a href="/" className="hover:text-gray-400">
               About
             </a>
