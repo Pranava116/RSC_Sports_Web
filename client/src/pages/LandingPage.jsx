@@ -8,15 +8,14 @@ import data from '../data.js'
 import Logo from '../components/Logo.jsx'
 import Text from '../components/Text.jsx'
 import SportsCard from '../components/SportsCard.jsx'
+import AniText from '../components/AniText.jsx'
 function LandingPage() {
-  const width = window.innerWidth
-  const height = window.innerHeight
   return (
     <div className=' bg-transparent'>
         <Navbar/>
         <div className='flex flex-col items-center justify-center'>
             <div className='my-6 mx-6'>
-            <Hero/>
+            <AniText/>
           </div>
            <Logo/>
         <Text text="EVENTS"/>
