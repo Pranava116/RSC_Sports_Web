@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import {motion} from 'framer-motion'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AgonesPage from './pages/AgonesPage';
+import StepUp from './pages/StepUp.jsx'
 
 function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -46,6 +47,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage/>} />
           <Route path='/agones' element={<AgonesPage/>} />
+          <Route path='/stepup' element={<StepUp/>} />
         </Routes>
       </Router>
     </div>

@@ -1,45 +1,69 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+  AlertDialogCancel,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 
 const SportsCard = (props) => {
-  const [showMore, setShowMore] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleShowMore = () => {
-    if (props.additionalInfo != "") {
-      setShowMore(!showMore);
+  // Reset animation state when dialog closes
+  useEffect(() => {
+    if (!isDialogOpen) {
+      const timer = setTimeout(() => {
+        setIsAnimating(false);
+      }, 300); // Match this with your animation duration
+      return () => clearTimeout(timer);
+    }
+  }, [isDialogOpen]);
+
+  const handleDialogChange = (open) => {
+    setIsDialogOpen(open);
+    if (open) {
+      setIsAnimating(true);
     }
   };
 
   return (
-    <section className="flex flex-row bg-transparent">
-      <div>
-        <CardContainer className="w-[300px] mx-[30px] inter-var justify-center items-cent">
-          <CardBody className="bg-gray-50 relative group/card w-[500px] h-[450px] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] rounded-xl p-6 border">
+    <div className="relative">
+      <div
+        className={`transition-all duration-300 ${
+          isDialogOpen
+            ? "scale-95 opacity-80 blur-sm"
+            : "scale-100 opacity-100 blur-none"
+        }`}
+      >
+        <CardContainer className="w-[300px] mx-[30px] inter-var">
+          <CardBody
+            className={`bg-gray-50 relative group/card w-[500px] h-[450px] ${
+              !isDialogOpen &&
+              "dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]"
+            } dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] rounded-xl p-6 border ${
+              isAnimating ? "pointer-events-none" : ""
+            }`}
+            onMouseEnter={() => !isDialogOpen && setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <CardItem
-              translateZ="50"
-              className="text-xl font-bold text-neutral-600 dark:text-white"
+              translateZ={isHovered && !isDialogOpen ? "50" : "20"}
+              className="text-xl font-bold text-neutral-600 dark:text-white transition-all duration-300"
             >
               {props.title}
             </CardItem>
+
             <CardItem
-              as="p"
-              translateZ="60"
-              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-            ></CardItem>
-            <CardItem
-              translateZ="100"
-              className="w-[170px] object-fit items-center mt-8"
+              translateZ={isHovered && !isDialogOpen ? "100" : "60"}
+              className="w-[170px] object-fit items-center mt-8 transition-all duration-300"
             >
               <img
                 src={props.src}
@@ -48,56 +72,46 @@ const SportsCard = (props) => {
                   height: "200px",
                   width: "200px",
                 }}
-                className="h-[100px] w-[200px] object-contain rounded-xl group-hover/card:shadow-xl"
+                className={`h-[100px] w-[200px] object-contain rounded-xl ${
+                  isHovered && !isDialogOpen ? "shadow-xl" : ""
+                } transition-all duration-300`}
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="flex justify-between items-center mt-20">
-              <CardItem
-                translateZ={50}
-                href="https://twitter.com/mannupaaji"
-                target="__blank"
-                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-              ></CardItem>
 
-              <AlertDialog>
+            <div className="flex justify-between items-center mt-20">
+              <AlertDialog onOpenChange={handleDialogChange}>
                 <AlertDialogTrigger asChild>
-                  <CardItem
-                    translateZ={50}
-                    as="button"
-                    onClick={handleShowMore}
-                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  <Button
+                    variant="outline"
+                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold hover:scale-105 transition-transform"
                   >
                     Read More
-                  </CardItem>
+                  </Button>
                 </AlertDialogTrigger>
-                <AlertDialogContent className="bg-black">
+
+                <AlertDialogContent className="bg-black border-gray-800 max-w-2xl">
                   <AlertDialogHeader>
-                    <AlertDialogTitle className="text-white">
+                    <AlertDialogTitle className="text-white text-2xl">
                       {props.title}
                     </AlertDialogTitle>
-                    <AlertDialogDescription className="text-white text-lg">
-                      {/* Image will only render if props.img exists */}
+                    <AlertDialogDescription className="text-white text-lg space-y-4">
                       {props.img && (
                         <div className="mb-4">
                           <img
                             src={props.img}
                             alt={props.title}
-                            loading="lazy" // Native lazy loading
-                            decoding="async" // Non-blocking decoding
-                            className="w-full h-auto max-h-[300px] object-contain rounded-lg"
-                            style={{
-                              contentVisibility: "auto", // Modern performance boost
-                              aspectRatio: "16/9", // Prevent layout shifts
-                            }}
+                            className="w-full h-auto max-h-[400px] object-contain rounded-lg border border-gray-700"
                           />
                         </div>
                       )}
-                      {props.additionalInfo}
+                      <div className="max-h-[60vh] overflow-y-auto pr-2">
+                        {props.additionalInfo}
+                      </div>
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter className="text-white">
-                    <AlertDialogCancel onClick={() => setShowMore(false)}>
+                    <AlertDialogCancel onClick={handleDialogChange}>
                       Close
                     </AlertDialogCancel>
                   </AlertDialogFooter>
@@ -107,7 +121,7 @@ const SportsCard = (props) => {
           </CardBody>
         </CardContainer>
       </div>
-    </section>
+    </div>
   );
 };
 

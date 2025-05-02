@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +17,9 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-10 font-mono">
           <a href="/" className="navLinks">Home</a>
-          <a href="#" className="navLinks">Step Up</a>
-          <a href="/agones" className="navLinks">Agones</a>
+          <Link to={'/stepup'} className="navLinks">StepUp</Link>
+          <Link to={'/agones'} className="navLinks">Agones</Link>
+          {/* <a href="/agones" className="navLinks">Agones</a> */}
           <a href="#" className="navLinks">About Us</a>
         </div>
         <div className="md:hidden flex items-center">
@@ -24,7 +27,7 @@ const Navbar = () => {
             onClick={toggleMenu}
             className="text-white focus:outline-none"
           >
-            <svg class="h-8 w-8 text-white-200"  width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" >  
+            <svg className="h-8 w-8 text-white-200"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round" >  
             <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />   
             <path d="M12 12a8 8 0 0 0 8 4M7.5 13.5a12 12 0 0 0 8.5 6.5" />  
             <path d="M12 12a8 8 0 0 0 8 4M7.5 13.5a12 12 0 0 0 8.5 6.5" transform="rotate(120 12 12)" />    
