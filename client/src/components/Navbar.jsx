@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +16,12 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-10 font-mono">
           <a href="/" className="navLinks">Home</a>
-          <Link to={'/stepup'} className="navLinks">StepUp</Link>
-          <Link to={'/agones'} className="navLinks">Agones</Link>
+          {/* <Link to={'/stepup'} className="navLinks">StepUp</Link>
+          <Link to={'/agones'} className="navLinks">Agones</Link> */}
           {/* <a href="/agones" className="navLinks">Agones</a> */}
-          <a href="#" className="navLinks">About Us</a>
+           <Link href="/about">
+            <a>About Us</a>
+          </Link>
         </div>
         <div className="md:hidden flex items-center">
           <button
