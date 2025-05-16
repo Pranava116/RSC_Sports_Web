@@ -14,7 +14,6 @@ import AniText from "../components/AniText.jsx";
 function LandingPage() {
   return (
     <div className=" bg-transparent">
-      <Navbar />
       <div className="flex flex-col items-center justify-center">
         <div className="my-6 mx-6">
           <AniText />
@@ -36,7 +35,6 @@ function LandingPage() {
         </div>
         <div className="flex-col items-center justify-center"></div>
       </div>
-      <Footer />
     </div>
   );
 }

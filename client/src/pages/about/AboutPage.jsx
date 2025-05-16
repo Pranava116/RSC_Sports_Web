@@ -1,11 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import Text from '../../components/Text'
 function AboutPage() {
   return (
-    <div>
-      <h1>About Us page</h1>
+    <div className="text-white">
+      <div className="flex text-center justify-center">
+        <Text text="About Us page" />
+      </div>
     </div>
-  )
+  );
 }
 
-export default AboutPage
+export default AboutPage;

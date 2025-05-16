@@ -13,11 +13,11 @@ function Card(props) {
         className=" flex flex-col animate-slide border-solid  mx-8 my-20 mt-[-30px] p-6 max-w-[500px] bg-white border border-gray-600 rounded-lg  dark:bg-gray-800 dark:border-gray-500 shadow justify-evenly sm:animate-fade-in-up bg-gradient-to-tl from-black to-gray-800"
       >
         <div className=" flex ">
-          <a href={props.link}>
+          <Link to={props.link}>
             <h5 className="mb-4 text-3xl font-semibold tracking-tight  dark:text-white">
               {props.title}
             </h5>
-          </a>
+          </Link>
           <div className="mx-5">
             <FaPersonRunning color="white" size={30} />
           </div>

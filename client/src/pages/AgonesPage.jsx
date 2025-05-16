@@ -30,13 +30,10 @@ import PowerLifting from "../assets/agones-powerlifting.JPG";
 import TableTennis from "../assets/agones-tabletennis.jpg";
 import Chess from "../assets/IMG-20240614-WA0034.jpg";
 
-
-
 function AgonesPage() {
   const router = useRouter();
   return (
     <div>
-      <Navbar />
       <div className="flex flex-wrap">
         <SportsCard
           src={bad.src}
@@ -98,9 +95,6 @@ function AgonesPage() {
           title="Kabbadi"
           additionalInfo="Kabaddi ignites at RNSIT. Students engage in intense bouts of strategy and agility on our court, epitomizing teamwork and determination, fostering a spirited atmosphere of competition."
         />
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );
